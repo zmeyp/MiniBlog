@@ -10,7 +10,7 @@
     }
 }
 
-html, body {
+html, body{
     height: 100%;
 }
 
@@ -30,18 +30,19 @@ a {
 .container {
     min-height: 100%;
     padding-bottom: 35px;
+    margin-top: 80px;
 }
 
-.container > header {
-    border: none;
-    text-align: center;
-    margin: 0 0 3em 0;
-}
+    .container > header {
+        border: none;
+        text-align: center;
+        margin: 0 0 3em 0;
+    }
 
-.container > header a {
-    font-size: 4em;
-    color: #433f3f;
-}
+        .container > header a {
+            font-size: 4em;
+            color: #000;
+        }
 
 div[role=main] {
     margin-bottom: 2em;
@@ -63,7 +64,7 @@ input[type], button, textarea {
 }
 
 .post header a {
-    color: #535656;
+    color: #000;
 }
 
 .post header div {
@@ -165,7 +166,7 @@ input[type], button, textarea {
             }
 
     #comments article.self div p {
-        background: #ecf3f5;
+        background: #f7f7f7;
     }
 
         #comments article.self div p:after {
@@ -191,13 +192,6 @@ input[type], button, textarea {
     #comments article [itemprop='creator'] {
         font-size: .8em;
         margin-left: 7px;
-    }
-
-    #comments article [itemprop='approvalWarning'] {
-        margin-left: 70px;
-        font-size: 0.6em;
-        background-color: rgba(255, 255, 0, 0.50);
-        padding: 5px;
     }
 
 /*#endregion */

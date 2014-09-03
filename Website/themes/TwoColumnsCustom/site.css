@@ -36,6 +36,9 @@ a {
     border: none;
     text-align: center;
     margin: 0 0 3em 0;
+    background: url(../../images/header.jpg) no-repeat left top;
+    padding: 80px 0 0 0;
+    margin-left: 15px;
 }
 
 .container > header a {

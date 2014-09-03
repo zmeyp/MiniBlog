@@ -1,6 +1,6 @@
 ﻿@{
-	string next = Blog.GetNextPage();
-	string prev = Blog.GetPrevPage();
+    string next = Blog.GetNextPage();
+    string prev = Blog.GetPrevPage();
 }
 
 @using Microsoft.Web.Helpers;
@@ -39,14 +39,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="@(Request.Url.Scheme +"://" + Request.Url.Authority + Request.RawUrl)" />
     @if (!string.IsNullOrEmpty(prev))
-	{
-		<link rel="prev" href="@prev" />
-	}
-	@if (!string.IsNullOrEmpty(next))
-	{
-		<link rel="next" href="@next" />
-	}
-    
+    {
+        <link rel="prev" href="@prev" />
+    }
+    @if (!string.IsNullOrEmpty(next))
+    {
+        <link rel="next" href="@next" />
+    }
+
     <script type="text/javascript">
         SyntaxHighlighter.all()
     </script>
@@ -56,12 +56,13 @@
 
     <div class="container">
         <header role="banner">
-            <span itemprop="name"><a href="~/" itemprop="url">@Blog.Title</a></span><br />
-            <em>@Blog.Description</em>
+            <div class="top_banner">
+                <span itemprop="name"><a href="~/" itemprop="url">@Blog.Title</a></span><br />
+                <em>@Blog.Description</em>
+            </div>
         </header>
-
         <div role="main" class="col-md-8">
-            
+
             @RenderBody()
 
             @if (Page.ShowPaging != null)
@@ -78,33 +79,27 @@
                     }
                 </ul>
             }
-        </div>
+        </div>        
 
         <aside role="complementary" class="col-md-3 col-md-offset-1">
             <section>
                 <h3>About me</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper.
+                    My name is Alex Kravchenko and I've been writing code for many years (since 1996) primarily in the payment industry and financial sector. I have a CS degree from U of A. I do enjoy my work, and would like to think that I produce clean and efficient solutions.
                 </p>
             </section>
             <section>
                 <h3>Categories</h3>
                 <ul>
-                    @foreach ( var cat in Blog.GetCategories() ) {
+                    @foreach (var cat in Blog.GetCategories())
+                    {
                         <li><a href="~/category/@HttpUtility.UrlEncode(cat.Key.ToLowerInvariant())">@cat.Key (@cat.Value)</a></li>
                     }
                 </ul>
             </section>
+            
             <section>
-                <h3>My side projects</h3>
-                <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                    <li>Project 3</li>
-                </ul>
-            </section>
-            <section>
-                Share: @LinkShare.GetHtml(Page.Title, linkSites: new[]{ LinkShareSite.All})
+                Share: @LinkShare.GetHtml(Page.Title, linkSites: new[] { LinkShareSite.All })
 
             </section>
         </aside>
