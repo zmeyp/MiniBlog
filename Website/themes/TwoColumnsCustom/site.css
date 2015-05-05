@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    font: 1.8em/1.5 'Century Gothic', Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
 }
 
@@ -24,7 +24,11 @@ img, video, iframe {
 }
 
 a {
-    color: #3277b3;
+    color: #4582ec;
+}
+
+.jumbotron h1 {
+    font-size: 2em;
 }
 
 .container {
@@ -35,15 +39,15 @@ a {
 .container > header {
     border: none;
     text-align: center;
-    margin: 0 0 3em 0;
+    margin: 0 0 2em 0;
     background: url(../../images/header.jpg) no-repeat left top;
-    padding: 80px 0 0 0;
+    padding: 140px 0 0 0;
     margin-left: 15px;
 }
 
 .container > header a {
-    font-size: 4em;
-    color: #433f3f;
+    font-size: 3em;
+    color: #4582ec;
 }
 
 div[role=main] {

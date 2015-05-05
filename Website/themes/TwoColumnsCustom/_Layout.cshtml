@@ -17,12 +17,16 @@
     <link type="application/rss+xml" rel="alternate" title="@Blog.Title" href="~/feed/rss/" />
     <link type="application/atom+xml" rel="alternate" title="@Blog.Title" href="~/feed/atom/" />
 
-    <link rel="stylesheet" href="@Blog.FingerPrint("/css/bootstrap-3.0.0.css", "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Blog.FingerPrint("/css/bootstrap-3.0.0.css", "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")" />
     <link rel="stylesheet" href="@Blog.FingerPrint("/themes/" + Blog.Theme + "/site.css")" />
+
     <link rel="shortcut icon" href="@Blog.FingerPrint("/favicon.ico")" type="image/x-icon" />
     <link rel="dns-prefetch" href="http://gravatar.com/" />
 
+    <link href="@Blog.FingerPrint("/css/shThemeDefault.css")" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="@Blog.FingerPrint("/scripts/shCore.js")"></script>
+    <script type="text/javascript" src="@Blog.FingerPrint("/scripts/shAutoloader.js")"></script>
+
     <script type="text/javascript" src="@Blog.FingerPrint("/scripts/shBrushCSharp.js")"></script>
     <script type="text/javascript" src="@Blog.FingerPrint("/scripts/shBrushXml.js")"></script>
 
@@ -79,7 +83,7 @@
                     }
                 </ul>
             }
-        </div>        
+        </div>
 
         <aside role="complementary" class="col-md-3 col-md-offset-1">
             <section>
@@ -97,13 +101,13 @@
                     }
                 </ul>
             </section>
-            
+
             <section>
                 <p>
                     Share: @LinkShare.GetHtml(Page.Title, linkSites: new[] { LinkShareSite.All })
                 </p>
             </section>
-            
+
             <section>
 
                 <p>
